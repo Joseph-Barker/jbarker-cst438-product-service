@@ -51,4 +51,8 @@ public class Product {
         return this.stock;
     }
 
+    public void decreaseStock (Integer OutboundStock) {
+        this.stock -= OutboundStock;
+    }
+
 }

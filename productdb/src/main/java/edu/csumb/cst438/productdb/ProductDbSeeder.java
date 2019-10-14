@@ -18,7 +18,7 @@ public class ProductDbSeeder implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-        //String name, String description, String imageURL, Double  price, Integer stock
+        //String name, String category,String description, String imageURL, Double  price, Integer stock
         Product ToolSet = new Product("Homeowner's Tool Set","Tools","All tools meet or exceed ANSI specs", "assets/img/Home_Tool_Kit.jpg", 48.49, 8);
         Product CircularSaw = new Product("Circular Saw","Tools","Cordless design provides optimal portability", "assets/img/Home_Tool_Kit.jpg", 69.00, 32);
         Product LawnMower = new Product("Push Mower","Outdoors" ,"6.75 ft. lb. gross torque 163cc Briggs & Stratton EXi OHV engine", "assets/img/Push_Lawn_Mower.jpg", 269.00, 64);

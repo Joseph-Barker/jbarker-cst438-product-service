@@ -13,7 +13,7 @@ public interface IProductRepository extends MongoRepository<Product, String> {
     @Query (value = "{'id':?0}")   
     Product findByRepoId(String id);
 
-    @Query (value = "{'powers.powers':?0}")
-    List<Product> findByPower(String power);
-
+    @Query (value = "{'category':?0}")
+    List<Product> findByCategory(String category);
+    
 }
