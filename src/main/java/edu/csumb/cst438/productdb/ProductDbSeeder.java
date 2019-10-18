@@ -1,4 +1,4 @@
-/*
+/*////////////
 
 package edu.csumb.cst438.productdb;
 
@@ -40,4 +40,4 @@ public class ProductDbSeeder implements CommandLineRunner{
 
 }
 
-*/
+*//////////////
