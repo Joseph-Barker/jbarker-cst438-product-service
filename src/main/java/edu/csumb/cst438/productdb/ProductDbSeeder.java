@@ -1,3 +1,5 @@
+/*
+
 package edu.csumb.cst438.productdb;
 
 import java.util.Arrays;
@@ -37,3 +39,5 @@ public class ProductDbSeeder implements CommandLineRunner{
     }
 
 }
+
+*/

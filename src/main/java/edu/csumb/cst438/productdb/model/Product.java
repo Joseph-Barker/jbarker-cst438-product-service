@@ -1,11 +1,14 @@
 package edu.csumb.cst438.productdb.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 @Document(collection = "Product")
 public class Product {
+    
+    
     @Id
+    @ApiModelProperty(required = false, hidden = true)
     private String id;
     private String name;
     private String category;
