@@ -18,7 +18,7 @@ public class UserService
     UserRepository userRepository;
 
 
-    public Iterable<User> getAll () {
+    public Iterable<User> getAll() {
         Iterable<User> result = userRepository.findAll();
         return result;
     }
@@ -41,6 +41,10 @@ public class UserService
 
     public String deleteUser(String email) {
         email = email.toLowerCase();
+        User user = userRepository.findByRepoId(email);
+        if (user == null) {
+            return "No user with email: " + email;    
+        }        
         userRepository.deleteById(email);
         return "Deleted user with email: " + email;
     }    
