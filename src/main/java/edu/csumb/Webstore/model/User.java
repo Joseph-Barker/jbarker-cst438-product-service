@@ -7,11 +7,14 @@ import java.util.HashMap;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import io.swagger.annotations.ApiModelProperty;
 @Document(collection = "Users")
 public class User {
     @Id
     private String email;
     private String password;
+    @ApiModelProperty(required = false, hidden = true)
     private HashMap<String, Integer> cart = new HashMap<>();
     
     public User (String email, String password, HashMap<String, Integer> cart) {
