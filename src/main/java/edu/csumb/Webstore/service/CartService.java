@@ -22,7 +22,10 @@ public class CartService
     public HashMap<String, Integer> getCart(String email) {
         email = email.toLowerCase();
         User result = userRepository.findByRepoId(email);
-        return result.getCart();
+        if (result != null) {
+            return result.getCart();
+        }
+        return null;
     }
 
     public String updateQuantity(String id, Integer proposedQuant, User user, String email) {
@@ -55,10 +58,11 @@ public class CartService
 
     public String changeQuantity(String email, String id, Integer quantity) {
         email = email.toLowerCase();
-        if (userRepository.findByRepoId(email) == null) {
+        User user = userRepository.findByRepoId(email);
+        if (user == null) {
             return "The user: " + email + " doesn’t exist in the user database.";
         }        
-        User user = userRepository.findByRepoId(email);
+        
         HashMap<String, Integer> cart = getCart(email);
         if (cart.get(id) == null) {
             return "User " + email + " doesn’t have product id: " + id + " in cart";
@@ -71,6 +75,10 @@ public class CartService
         User user = userRepository.findByRepoId(email);
         HashMap<String, Integer> cart = getCart(email);
         
+        if (user == null) {
+            return "The user: " + email + " doesn’t exist in the user database.";
+        } 
+
         for (HashMap.Entry<String,Integer> entry : cart.entrySet()){
             Product product = productRepository.findByRepoId(entry.getKey());
             if (product != null) {

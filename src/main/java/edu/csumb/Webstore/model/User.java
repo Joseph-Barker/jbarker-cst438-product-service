@@ -17,10 +17,9 @@ public class User {
     @ApiModelProperty(required = false, hidden = true)
     private HashMap<String, Integer> cart = new HashMap<>();
     
-    public User (String email, String password, HashMap<String, Integer> cart) {
+    public User (String email, String password) {
         this.email = email;
-        this.password = password; 
-        this.cart = cart;
+        this.password = password;
     }
 
     public String getEmail () {
