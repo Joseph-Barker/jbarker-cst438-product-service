@@ -35,7 +35,7 @@ public class CartController {
     @ApiOperation(value = "Set a product to a specific quantity in a user's cart")
     @PostMapping("/user/cart/edit/{email}/{id}/{quantity}")
     public String changeProductInCart (@PathVariable String email, String id, Integer quantity) {
-        return cartService.changeQuantity(email, id, quantity);
+        return cartService.changeCartQuantity(email, id, quantity);
     }
 
     @ApiOperation(value = "Product stock is reduced and user cart is cleared")

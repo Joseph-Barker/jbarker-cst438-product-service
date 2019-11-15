@@ -56,7 +56,7 @@ public class CartService
         return updateQuantity(id, proposedQuant, user, email);
     }
 
-    public String changeQuantity(String email, String id, Integer quantity) {
+    public String changeCartQuantity(String email, String id, Integer quantity) {
         email = email.toLowerCase();
         User user = userRepository.findByRepoId(email);
         if (user == null) {
