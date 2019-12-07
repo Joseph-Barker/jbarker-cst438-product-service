@@ -18,7 +18,7 @@ import io.swagger.annotations.ApiOperation;
 import edu.csumb.Webstore.model.Product;
 import edu.csumb.Webstore.service.ProductService;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 public class ProductController {
 

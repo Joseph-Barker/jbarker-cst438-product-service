@@ -13,7 +13,7 @@ import edu.csumb.Webstore.model.User;
 import edu.csumb.Webstore.service.UserService;
 import io.swagger.annotations.ApiOperation;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 public class UserController {
 

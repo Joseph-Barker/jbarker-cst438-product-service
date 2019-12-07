@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import edu.csumb.Webstore.service.CartService;
 import io.swagger.annotations.ApiOperation;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 public class CartController {
 
